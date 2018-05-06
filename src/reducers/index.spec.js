@@ -1,4 +1,5 @@
-import {getCartProducts, getTotal} from './index';
+import {getCartProducts} from '../selectors';
+import {getTotal} from '../selectors';
 
 describe('selectors', () => {
 	describe('getTotal', () => {
