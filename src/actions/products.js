@@ -18,20 +18,22 @@ export const INITIAL_STATE = /** @lends State.prototype */ {
 	}
 };
 
-export const getAllProducts = () => dispatch => {
-	shop.getProducts(products => {
-		const byId = {};
-		const visibleIds = [];
-		products.forEach(product => {
-			byId[product.id] = product;
-			visibleIds.push(product.id);
-		});
-
-		dispatch(commit(`Got all products`, {
-			products: set({
-				byId,
-				visibleIds
-			})
-		}));
+export const _gotAllProducts = dispatch => products => {
+	const byId = {};
+	const visibleIds = [];
+	products.forEach(product => {
+		byId[product.id] = product;
+		visibleIds.push(product.id);
 	});
+
+	dispatch(commit(`Got all products`, {
+		products: set({
+			byId,
+			visibleIds
+		})
+	}));
+};
+
+export const getAllProducts = () => dispatch => {
+	return shop.getProducts(_gotAllProducts(dispatch));
 };
