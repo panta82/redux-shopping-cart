@@ -1,5 +1,5 @@
-import * as fromCart from './reducers/cart';
-import * as fromProducts from './reducers/products';
+import * as fromCart from '../reducers/cart';
+import * as fromProducts from '../reducers/products';
 
 const getAddedIds = state => fromCart.getAddedIds(state.cart);
 const getQuantity = (state, id) => fromCart.getQuantity(state.cart, id);

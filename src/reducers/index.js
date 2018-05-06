@@ -6,11 +6,3 @@ export default combineReducers({
 	cart,
 	products
 });
-
-
-
-
-
-
-
-
