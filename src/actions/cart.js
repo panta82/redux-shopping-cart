@@ -49,7 +49,7 @@ export const addToCart = (productId) => (dispatch, getState) => {
 };
 
 export const checkout = products => (dispatch, getState) => {
-	const cart = getState().cart;
+	//const cart = getState().cart;
 
 	dispatch(commit(`Checkout request, clean cart`, {
 		cart: set({

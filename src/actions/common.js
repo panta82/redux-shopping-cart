@@ -1,5 +1,3 @@
-import l_isArray from 'lodash/isArray';
-import l_isString from 'lodash/isString';
 import l_isObjectLike from 'lodash/isObjectLike';
 
 /**
