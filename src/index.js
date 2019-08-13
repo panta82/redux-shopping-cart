@@ -4,8 +4,12 @@ import {applyMiddleware, createStore} from 'redux';
 import {Provider} from 'react-redux';
 import {createLogger} from 'redux-logger';
 import thunk from 'redux-thunk';
-import reducer from './reducers';
-import {getAllProducts} from './actions';
+
+// Replace with our new reducer
+//import reducer from './reducers';
+import reducer from './reducer';
+
+import {getAllProducts} from './actions/products';
 import App from './containers/App';
 
 const middleware = [thunk];
